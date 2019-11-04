@@ -10,6 +10,9 @@ document.write("<br>")
 const prijsfris = 1.50;
 const prijsbier = 2.50;
 const prijswijn = 3.50;
+var fris;
+var bier;
+var wijn;
 var totaalfris = 0;
 var totaalbier = 0;
 var totaalwijn = 0;
@@ -17,25 +20,41 @@ var totaalprijsfris = 0;
 var totaalprijsbier = 0;
 var totaalprijswijn = 0;
 
-function bestellen(){
-    while(fris,bier,wijn != "stop"){
-        var fris = prompt("Hoeveel fris wilt u bestellen?");
-        var bier = prompt("Hoeveel bier wilt u bestellen?");
-        var wijn = prompt("Hoeveel wijn wilt u bestellen?");
-        totaalfris = totaalfris + fris;
-        totaalbier = totaalbier + bier;
-        totaalwijn = totaalwijn + wijn;
-        totaalprijsfris = totaalfris * prijsfris;
-        totaalprijsbier = totaalbier * prijsbier;
-        totaalprijswijn = totaalwijn * prijswijn;
+    function bestelfris(){
+        while(fris != "stop"){
+            var fris = 0 + prompt("Hoeveel fris wilt u bestellen?");
+            return fris;
+        }
     }
+
+    function bestelbier(){
+        while(bier != "stop"){
+            var bier = 0 + prompt("Hoeveel bier wilt u bestellen?");
+            return bier;
+        }
+    }
+
+    function bestelwijn(){
+        while(wijn != "stop"){
+           var wijn = 0 + prompt("Hoeveel wijn wilt u bestellen?");
+           return wijn;
+        }
+    }
+
+function berekenen(){
+    totaalfris = totaalfris + fris;
+    totaalbier = totaalbier + bier;
+    totaalwijn = totaalwijn + wijn;
+    totaalprijsfris = totaalfris * prijsfris;
+    totaalprijsbier = totaalbier * prijsbier;
+    totaalprijswijn = totaalwijn * prijswijn;
 }
 
-bestellen();
+bestelfris();
+bestelbier();
+bestelwijn();
 
-document.write(totaalfris);
-document.write(totaalbier);
-document.write(totaalwijn);
-document.write(totaalprijsfris);
-document.write(totaalprijsbier);
-document.write(totaalprijswijn);
+
+document.write(fris);
+document.write(bier);
+document.write(wijn);
