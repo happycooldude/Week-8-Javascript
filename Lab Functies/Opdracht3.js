@@ -7,7 +7,7 @@ function naamleeftijd() {
   while (stop == true) {
     var naam = prompt("Welke namen wilt u opgeven? ");
     var leeftijd = prompt("Wat is zijn/haar leeftijd?");
-    document.write(naam + leeftijd + "<br>");
+    document.write(naam + " " + leeftijd + "<br>");
     stop = confirm("wilt u doorgaan of stoppen?");
   }
 }
